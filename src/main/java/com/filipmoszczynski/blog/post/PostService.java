@@ -11,14 +11,15 @@ import java.util.List;
 @Service
 public class PostService {
 
-    private static final ObjectMapper MAPPER = new ObjectMapper();
+    private static final ObjectMapper MAPPER = new ObjectMapper(); //to parsuje json na object
     private static final Logger LOGGER = LoggerFactory.getLogger(PostService.class);
 
     public List<PostDto> getPosts(){
         try {
             return MAPPER.readValue(
-                    getClass().getClassLoader().getResource("post.json"),
+                    getClass().getClassLoader().getResource("post.json"), //to wskazuje na lokalizację zależną od umiejscowienia appki
                     MAPPER.getTypeFactory().constructCollectionType(List.class, PostDto.class)
+                    //a mapuje w ten sposób
             );
         } catch (IOException e) {
             LOGGER.error("Error{}", e.getLocalizedMessage());
