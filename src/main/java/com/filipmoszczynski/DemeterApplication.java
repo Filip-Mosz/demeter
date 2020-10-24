@@ -1,4 +1,4 @@
-package com.filipmoszczynski.demeter;
+package com.filipmoszczynski;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
