@@ -63,7 +63,10 @@
         <div class="col-md-8 blog-main">
 
             <!-- post.html:START -->
-            <div th:replace="blog/parts/post.html :: template">post</div>
+            <section th:each="post : ${posts}">
+            <div th:replace="blog/parts/post.html :: template"
+                 (post="${post}")>post</div>
+            </section>
             <!-- post.html:END -->
 
         </div>

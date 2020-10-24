@@ -20,8 +20,8 @@ public class BlogController {
         this.postService = postService;
     }
 
-    private MenuService menuService;
-    private PostService postService;
+    private final MenuService menuService;
+    private final PostService postService;
 
     @GetMapping({"/blog"})
     public String getBlog(Model model) {
