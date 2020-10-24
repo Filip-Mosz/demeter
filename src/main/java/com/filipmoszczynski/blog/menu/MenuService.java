@@ -13,7 +13,7 @@ public class MenuService {
                 new MenuDto("Technology"),
                 new MenuDto("Design"),
                 new MenuDto("Culture"),
-                new MenuDto("Bussiness"),
+                new MenuDto("Business"),
                 new MenuDto("Politics"),
                 new MenuDto("Opinion"),
                 new MenuDto("Science"),
