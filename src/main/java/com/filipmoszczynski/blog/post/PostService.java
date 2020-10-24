@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostService {
@@ -25,5 +26,12 @@ public class PostService {
             LOGGER.error("Error{}", e.getLocalizedMessage());
             return List.of();
         }
+    }
+
+    public Optional<PostDto> getPost(String id) {
+        return getPosts()
+                .stream()
+                .filter(post->post.getId().equalsIgnoreCase(id))
+                .findFirst();
     }
 }

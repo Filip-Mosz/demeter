@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class BlogController {
@@ -34,4 +36,14 @@ public class BlogController {
 
         return"blog/index.html";
     }
+
+    @GetMapping({"/blog/{id}"})
+    public String getBlogPost(@PathVariable("id") String id, Model model) {
+        Optional<PostDto> post = postService.getPost(id);
+        List<MenuDto> menuItems = menuService.getMenu();
+        model.addAttribute("post", getPost(post.get()));
+        model.addAttribute("menuItems", menuItems);
+        return "blog/post.html";
+    }
+    private PostDto getPost(PostDto post) { return post.setContent(post.getContent().repeat(50));  }
 }
