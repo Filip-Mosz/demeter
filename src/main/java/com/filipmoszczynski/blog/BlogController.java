@@ -45,5 +45,7 @@ public class BlogController {
         model.addAttribute("menuItems", menuItems);
         return "blog/post.html";
     }
-    private PostDto getPost(PostDto post) { return post.setContent(post.getContent().repeat(50));  }
+    public PostDto getPost(PostDto post) {
+        return post.setContent(post.getContent().repeat(50));
+    }
 }

@@ -11,6 +11,8 @@
         <span th:text="${post.date}"></span> by <a href="#" th:text="${post.author}">...</a>
     </p>
     <p th:text="${post.content}"></p>
+
+    <a th:href="@{/blog/{id}(id=${post.id})}">more</a>
 </div>
 </body>
 </html>
