@@ -2,17 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Demeter - Fragments</title>
+    <title>Fragments 2</title>
     <link media="all" rel="stylesheet"
           href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Egzampel Fragmientów</h1>
-
-    <div th:replace="fragments/general :: header">The header</div>
-    <div th:replace="fragments/general :: menu">The menu</div>
-    <div th:replace="fragments/general :: content">The Content</div>
-    <div th:replace="fragments/general :: footer">The footer</div>
-
+<h1>Fragments 2 Example</h1>
+<div th:replace="fragments2/parts/header :: header">The header</div>
+<div th:replace="fragments2/parts/menu :: menu">The menu</div>
+<div th:replace="fragments2/parts/content :: content">The Content</div>
+<div th:replace="fragments2/parts/footer :: footer">The Footer</div>
 </body>
 </html>
