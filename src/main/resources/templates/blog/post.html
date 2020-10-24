@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="blog/layouts/default" lang="en">
+
+<div layout:fragment="content">
+    <div th:replace="blog/fragments/post :: template(post=${post})"></div>
+</div>
+
+</html>

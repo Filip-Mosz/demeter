@@ -19,8 +19,8 @@ public class BlogRestController {
         this.postService = postService;
     }
 
-    private MenuService menuService;
-    private PostService postService;
+    final private MenuService menuService;
+    final private PostService postService;
 
     @GetMapping("/api/blog/menu")
     public List<MenuDto> getMenu() {
