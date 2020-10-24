@@ -7,6 +7,11 @@
           href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Fragmienty</h1>
+<h1>Egzampel Fragmientów</h1>
+
+    <div th:replace="fragments/general :: header">The header</div>
+    <div th:replace="fragments/general :: menu">The menu</div>
+    <div th:replace="fragments/general :: content">The Content</div>
+    <div th:replace="fragments/general :: footer">The footer</div>
 </body>
 </html>
