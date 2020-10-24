@@ -22,7 +22,11 @@
     <!-- header.html:END -->
 
     <!-- menu.html:START-->
-    <div th:replace="blog/parts/menu.html :: template">menu</div>
+    <!--/*@thymesVar id="menuItems" type="List<com.filipmoszczynski.blog.menu.MenuDto>"*/-->
+    <div
+            th:replace="blog/parts/menu.html :: template
+                (items=${menuItems})">menu
+    </div>
     <!-- menu.html:END-->
 
     <!-- banner.html:START-->

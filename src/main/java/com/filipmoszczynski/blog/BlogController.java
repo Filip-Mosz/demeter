@@ -13,6 +13,10 @@ import java.util.List;
 public class BlogController {
 
     @Autowired
+    public BlogController(MenuService menuService) {
+        this.menuService = menuService;
+    }
+
     private MenuService menuService;
 
     @GetMapping({"/blog"})
