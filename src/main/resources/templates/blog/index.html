@@ -61,14 +61,11 @@
 <main role="main" class="container">
     <div class="row">
         <div class="col-md-8 blog-main">
-
             <!-- post.html:START -->
             <section th:each="post : ${posts}">
-            <div th:replace="blog/parts/post.html :: template"
-                 (post="${post}")>post</div>
+                <div th:replace="blog/parts/post :: template (post=${post})"></div>
             </section>
             <!-- post.html:END -->
-
         </div>
 
         <aside class="col-md-4 blog-sidebar">
